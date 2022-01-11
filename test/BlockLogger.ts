@@ -12,7 +12,7 @@ describe('a block logger', () => {
   });
 
   it('should provide the block number', async () => {
-    const [infoNumber, infoTimestamp] = await blockLogger.blockInformation();
+    const [infoNumber, _] = await blockLogger.blockInformation();
 
     const blockNumber = await ethers.provider.getBlockNumber();
     const block = await ethers.provider.getBlock(blockNumber);
@@ -21,7 +21,7 @@ describe('a block logger', () => {
   });
 
   it('should provide the block timestamp', async () => {
-    const [infoNumber, infoTimestamp] = await blockLogger.blockInformation();
+    const [_, infoTimestamp] = await blockLogger.blockInformation();
 
     const blockNumber = await ethers.provider.getBlockNumber();
     const block = await ethers.provider.getBlock(blockNumber);
