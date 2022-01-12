@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy-testnet": "npx hardhat run scripts/deploy.ts --network arbitrum"
+    "deploy-testnet": "npx hardhat run scripts/deploy.ts --network arbitrum",
+    "view-block-info": "ts-node scripts/viewBlockInfo.ts"
   },
   "keywords": [],
   "author": "",
