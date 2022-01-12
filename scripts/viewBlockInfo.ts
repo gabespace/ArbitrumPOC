@@ -16,8 +16,8 @@ async function main() {
   console.log('Current date:', new Date().toLocaleString());
   console.log();
 
-  await logBlockInformation('Mainnet', infuraMainnetEndpoint);
-  await logBlockInformation('Testnet', infuraTestnetEndpoint);
+  await logBlockInformation('Mainnet (Infura)', infuraMainnetEndpoint);
+  await logBlockInformation('Testnet (Infura)', infuraTestnetEndpoint);
   console.log();
 
   const arbitrumTestnetProvider = new ethers.providers.JsonRpcProvider(arbitrumTestnetEndpoint);
