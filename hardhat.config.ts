@@ -14,7 +14,8 @@ const config: HardhatUserConfig = {
   solidity: "0.8.4",
   networks: {
     arbitrum: {
-      url: 'https://rinkeby.arbitrum.io/rpc',
+      url: process.env['L2RPC'],
+      accounts: process.env['DEVNET_PRIVKEY'] ? [process.env['DEVNET_PRIVKEY']] : []
     },
   },
 };
